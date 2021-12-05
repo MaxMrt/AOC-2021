@@ -3,6 +3,7 @@
 	"version": "1.0.0",
 	"description": "Advent of Code Challenge 2021",
 	"main": "index.ts",
+	"type": "module",
 	"scripts": {
 		"start": "ts-node-dev src/index.ts",
 		"dev": "ts-node-dev --respawn src/index.ts",
@@ -19,7 +20,11 @@
 	},
 	"homepage": "https://github.com/MaxMrt/AOC-2021#readme",
 	"dependencies": {
+		"@babel/core": "^7.16.0",
+		"@babel/preset-env": "^7.16.4",
+		"@babel/preset-typescript": "^7.16.0",
 		"@types/jest": "^27.0.3",
+		"babel-jest": "^27.4.2",
 		"jest": "^27.4.3",
 		"prettier": "^2.5.0",
 		"ts-jest": "^27.0.7",
