@@ -53,4 +53,32 @@ export function calculatePosition(s: string) {
 	return horizontal * depth;
 }
 
+// Part 2
+export function calculateAim(s: string) {
+	let horizontal = 0;
+	let depth = 0;
+	let aim = 0;
+
+	parse(s).forEach((element) => {
+		switch (element.direction) {
+			case Direction.forward: {
+				horizontal += element.unit;
+				depth += aim * element.unit;
+				break;
+			}
+			case Direction.up: {
+				aim -= element.unit;
+				break;
+			}
+			case Direction.down: {
+				aim += element.unit;
+				break;
+			}
+		}
+	});
+
+	return horizontal * depth;
+}
+
 //console.log(calculatePosition(data));
+console.log(calculateAim(data));
